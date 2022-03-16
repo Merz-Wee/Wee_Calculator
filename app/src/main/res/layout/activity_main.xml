@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#39A2DB"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_multiplication"
+        android:layout_width="77dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="casual"
+        android:text="*"
+        app:layout_constraintEnd_toStartOf="@+id/button_division"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberSecondVariable" />
+
+    <Button
+        android:id="@+id/button_division"
+        android:layout_width="77dp"
+        android:layout_height="61dp"
+        android:fontFamily="casual"
+        android:text="/"
+        app:layout_constraintEnd_toStartOf="@+id/button_addition"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_multiplication"
+        app:layout_constraintTop_toTopOf="@+id/button_multiplication" />
+
+    <Button
+        android:id="@+id/button_addition"
+        android:layout_width="77dp"
+        android:layout_height="61dp"
+        android:fontFamily="casual"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@+id/button_subtraction"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_division"
+        app:layout_constraintTop_toTopOf="@+id/button_division" />
+
+    <Button
+        android:id="@+id/button_subtraction"
+        android:layout_width="77dp"
+        android:layout_height="61dp"
+        android:fontFamily="casual"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_addition"
+        app:layout_constraintTop_toTopOf="@+id/button_addition" />
+
+    <TextView
+        android:id="@+id/first_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="casual"
+        android:text="First Number"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/second_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="casual"
+        android:text="Second Number"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberFirstVariable" />
+
+    <EditText
+        android:id="@+id/editTextNumberFirstVariable"
+        android:layout_width="243dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_number" />
+
+    <EditText
+        android:id="@+id/editTextNumberSecondVariable"
+        android:layout_width="243dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_number" />
+
+    <Button
+        android:id="@+id/button_modulo"
+        android:layout_width="163dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="152dp"
+        android:text="%"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberSecondVariable" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="Answer: "
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
